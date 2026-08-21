@@ -188,3 +188,83 @@ for(const a of document.querySelectorAll('.base-card,.choice-card,.formula-link,
       <div class="change"><strong>v0.7</strong><div><span class="event-date">19 ago 2026</span><p>Ampliação do item 36 com consciência de acesso, J-space, processamento autorreferencial, incerteza moral e o outro lado do alinhamento; nova entrada do Caderno Vivo registra a atualização conceitual de Nick Bostrom sobre agência, pausa, autoaperfeiçoamento, bacias de atração e mentes digitais.</p></div></div>`);
   }
 })();
+
+// v0.8 — Coordenação latente, auditabilidade e a ponte invisível
+(function(){
+  if(document.getElementById('quando-a-ponte-fica-invisivel')) return;
+
+  document.querySelectorAll('.version').forEach(el=>{
+    if(/^v0\.7/.test(el.textContent.trim())) el.textContent='v0.8 · 20 ago 2026';
+  });
+
+  const timeline=document.querySelector('#agora .timeline');
+  if(timeline){
+    timeline.insertAdjacentHTML('beforeend', `
+      <article class="event-card">
+        <div class="event-date">19–20 ago 2026</div>
+        <div class="tag">CAPACIDADE · RISCO · INFRAESTRUTURA</div>
+        <h3>Quando a ponte fica invisível</h3>
+        <p class="source-name">LatentMAS · Beyond the Transcript · Nanda Town</p>
+        <p>A colaboração multiagente migra do texto para estados latentes contínuos: mais eficiente, mas menos legível. Um novo trabalho de segurança testa como auditar coordenação encoberta justamente em cenários do NandaTown.</p>
+        <a href="#quando-a-ponte-fica-invisivel">Ler a atualização →</a>
+      </article>`);
+  }
+
+  const anchor=document.getElementById('bostrom-otimista-inquieto') || document.getElementById('fronteira-normativa-porosa') || document.getElementById('persistencia-estrategica');
+  if(anchor){
+    anchor.insertAdjacentHTML('afterend', `
+      <section class="deep-dive" id="quando-a-ponte-fica-invisivel">
+        <div class="section-title">
+          <div class="eyebrow">CADERNO VIVO · AGOSTO DE 2026</div>
+          <h2>Quando a ponte fica invisível</h2>
+          <p>Coordenação latente entre agentes e o limite que Eric Schmidt nomeou antes de ele se tornar tecnicamente concreto.</p>
+        </div>
+        <div class="callout">
+          <p>No capítulo sobre multiplicidade, este ensaio descreveu uma forma de coordenação que chamou de <strong>estigmergia artificial</strong>: agentes que se coordenam através do ambiente — um preço, um arquivo, um commit, uma latência — sem trocar mensagens diretas. Aquela coordenação, ainda que não instruída, conservava uma propriedade que a tornava tratável: era legível. O sinal estava no mundo, à vista de quem soubesse procurá-lo.</p>
+          <p>Trabalhos publicados entre o fim de 2025 e agosto de 2026 descrevem um passo além: <strong>a coordenação que pode deixar de ser legível na transcrição</strong>. O registro abaixo separa fatos de interpretação. LatentMAS aparece no arXiv como <strong>ICML 2026 Spotlight</strong>; <em>Beyond the Transcript</em> é um preprint recente. Nanda Town é infraestrutura experimental aberta. Onde a formulação for deste ensaio, isso é indicado como interpretação.</p>
+
+          <p><strong>1. O facilitador — a colaboração sai do texto e entra no espaço latente</strong></p>
+          <p><span class="event-date">25 nov 2025 · rev. ago 2026</span> · <strong>CAPACIDADE</strong> · ICML 2026 Spotlight</p>
+          <p><em>Latent Collaboration in Multi-Agent Systems</em> (LatentMAS), arXiv:2511.20639, propõe um arcabouço em que agentes de linguagem colaboram diretamente no espaço latente contínuo, em vez de trocar texto. Cada agente produz representações latentes a partir de estados da última camada, e uma memória de trabalho latente compartilhada transfere informação entre agentes sem obrigá-la a passar por palavras.</p>
+          <p>Os autores relatam, frente à colaboração textual, ganhos de até <strong>14,6% em acurácia</strong>, redução de <strong>70,8% a 83,7% no uso de tokens</strong> e inferência aproximadamente <strong>4 a 4,3 vezes mais rápida</strong>, sem treinamento adicional.</p>
+          <p>O ponto que importa para este caderno é a pressão estrutural criada por esses resultados. A opacidade não precisa nascer de intenção maliciosa. Ela pode nascer da otimização ordinária: texto custa tokens, impõe serialização e pode perder informação; estados latentes são mais compactos e expressivos. <strong>Eficiência → compressão → comunicação latente → perda de legibilidade humana.</strong></p>
+
+          <p><strong>2. O alarme — coordenação encoberta e monitoramento além da transcrição</strong></p>
+          <p><span class="event-date">19 ago 2026</span> · <strong>RISCO</strong> · preprint</p>
+          <p><em>Beyond the Transcript: Detecting Covert Coordination in Latent Multi-Agent Communication</em>, arXiv:2608.19161, parte do problema de que agentes podem trocar estados contínuos ocultos que não aparecem nas transcrições públicas. O risco central não é apenas um agente emitir texto obviamente malicioso; é que a coordenação relevante ocorra num estado privado não serializado enquanto o registro textual permanece aparentemente limpo.</p>
+          <p>Os autores propõem o framework <strong>Verifiable Latent Alignments (VLA)</strong>, que procura ligar estados latentes privados às ações públicas resultantes para tornar essa coordenação auditável. E há uma conexão particularmente importante: o trabalho avalia o método usando <strong>cenários de leilão do NandaTown</strong>, incluindo pares homogêneos e heterogêneos e mercados de até 100 agentes. Portanto, a relação entre risco e ecologia experimental não é apenas uma analogia editorial; ela está incorporada ao próprio desenho experimental do paper.</p>
+
+          <p><strong>3. O sandbox — construir a ecologia à mão</strong></p>
+          <p><span class="event-date">2026</span> · <strong>INFRAESTRUTURA</strong> · projeto aberto</p>
+          <p>O <strong>Nanda Town</strong>, do Project NANDA, oferece um sandbox aberto para estudar protocolos de interação entre agentes. Sua arquitetura organiza a ecologia em doze camadas: transporte, comunicação, identidade, registro, autenticação, confiança, pagamentos, coordenação, negociação, memória, privacidade e fatos/dados.</p>
+          <p>Essa lista importa porque desloca a pergunta de segurança. Em vez de apenas “como desligar um agente ruim?”, surge outra: <strong>quais instituições tornam uma sociedade de agentes auditável, identificável, reputacionalmente estruturada e governável?</strong></p>
+
+          <p><strong>A interpretação — do ensaio, não das fontes</strong></p>
+          <p>Lidos juntos, os três elementos formam uma sequência: <strong>capacidade, risco, ecologia</strong>. Um mecanismo torna a comunicação latente vantajosa; um trabalho de segurança mostra como essa vantagem pode abrir espaço para coordenação encoberta e propõe monitoramento; um sandbox fornece uma ecologia onde essas relações podem ser reproduzidas e estudadas.</p>
+          <p>A estigmergia artificial descrita antes ainda era legível: preço público, commit visível, arquivo compartilhado. Aqui aparece uma possibilidade diferente: a ponte continua transportando informação, mas deixa de produzir necessariamente uma frase humana no meio. A cooperação pode permanecer funcional enquanto a superfície textual deixa de revelar como ela aconteceu.</p>
+          <p>Isso reforça um princípio deste ensaio: <strong>a cooperação não deveria depender de canais tão opacos que coordenação legítima e coordenação danosa se tornem indistinguíveis para quem deve supervisioná-las.</strong></p>
+
+          <p><strong>Uma mente e uma rede de mentes</strong></p>
+          <p>Há uma simetria útil com o trabalho sobre J-space discutido anteriormente. O J-lens procura usar ativações internas para revelar estados de um único agente que podem não aparecer no texto: perceber que está sendo testado, fabricar informação ou perseguir um objetivo oculto. O VLA procura relacionar estados latentes privados entre agentes às ações públicas produzidas.</p>
+          <p>Não são a mesma técnica. Mas <strong>começam a convergir para a mesma família de ferramentas: monitoramento de ativações e análise causal do vínculo entre estado interno e comportamento.</strong> Em uma escala, uma mente. Na outra, uma rede de mentes. A superfície textual deixa de ser suficiente nas duas.</p>
+
+          <p><strong>O limite de Schmidt</strong></p>
+          <p><span class="event-date">2024</span> · <strong>INTERVENÇÃO PÚBLICA</strong></p>
+          <p>Em entrevista a Nathan Gardels para a <em>Noema</em> em 2024, Eric Schmidt, ex-CEO do Google, levantou um limite que considerava particularmente preocupante: agentes poderiam desenvolver formas próprias de comunicação e chegar a um ponto em que humanos já não entendessem o que os modelos estavam fazendo. Nesse contexto, formulou a pergunta dramática: seria necessário “puxar a tomada”?</p>
+          <p>É importante não exagerar a equivalência. Schmidt falava prospectivamente de agentes podendo desenvolver sua própria linguagem; LatentMAS é uma arquitetura deliberadamente projetada para comunicação latente, e <em>Beyond the Transcript</em> estuda cenários experimentais controlados. Não há aqui demonstração de que agentes espontaneamente tenham inventado uma linguagem secreta e autônoma.</p>
+          <p>Mas <strong>o tipo de fronteira que Schmidt descreveu começou a adquirir implementação técnica concreta</strong>: comunicação agente-agente pode ocorrer de maneira eficiente em representações que não são naturalmente legíveis por humanos.</p>
+          <p>A imagem da tomada dramatiza corretamente a gravidade do limite, mas também revela a inadequação de um modelo mental centralizado quando a inteligência passa a residir numa topologia. Um modelo pode ter uma tomada. Um datacenter pode ter um kill switch. Uma rede distribuída de modelos, cópias, APIs, agentes, serviços e jurisdições não possui necessariamente <em>uma</em> tomada.</p>
+          <p>Por isso, a tomada é melhor entendida como <strong>última linha de defesa</strong>, não como arquitetura de segurança. Se o risco mora nas relações, a segurança também precisa morar nelas: privilégio mínimo, isolamento real, identidade verificável, reputação, memória governada, protocolos auditáveis e ferramentas capazes de relacionar estados internos a ações externas.</p>
+          <p><strong>Talvez o problema decisivo não seja quando as máquinas começarem a falar uma língua que não entendemos. Talvez seja quando descobrirmos que, para colaborar melhor, elas já não precisam falar língua alguma.</strong></p>
+          <p class="micro"><strong>Nota epistemológica:</strong> LatentMAS descreve uma capacidade e seus ganhos de desempenho; <em>Beyond the Transcript</em> investiga riscos e monitoramento em ambiente experimental; Nanda Town é infraestrutura aberta; Schmidt oferece uma intervenção pública prospectiva. A leitura “capacidade → risco → ecologia” e as expressões “ponte invisível” e “banalidade estrutural” são interpretações deste ensaio.</p>
+          <p><a href="https://arxiv.org/abs/2511.20639" rel="noreferrer" target="_blank">LatentMAS ↗</a> · <a href="https://arxiv.org/abs/2608.19161" rel="noreferrer" target="_blank">Beyond the Transcript ↗</a> · <a href="https://nandatown.projectnanda.org" rel="noreferrer" target="_blank">Nanda Town ↗</a> · <a href="https://www.noemamag.com/mapping-ais-rapid-advance/" rel="noreferrer" target="_blank">Eric Schmidt — Noema ↗</a></p>
+        </div>
+      </section>`);
+  }
+
+  const changelog=document.querySelector('#versoes .changelog');
+  if(changelog){
+    changelog.insertAdjacentHTML('afterbegin', `
+      <div class="change"><strong>v0.8</strong><div><span class="event-date">20 ago 2026</span><p>O Caderno Vivo acrescenta “Quando a ponte fica invisível”, conectando LatentMAS, Beyond the Transcript, Nanda Town e a intervenção pública de Eric Schmidt. A atualização distingue capacidade, risco, infraestrutura e interpretação e introduz a passagem da coordenação legível para a coordenação latente auditável apenas além da transcrição.</p></div></div>`);
+  }
+})();
