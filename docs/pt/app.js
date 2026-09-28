@@ -17,6 +17,12 @@ for(const a of document.querySelectorAll('.base-card,.choice-card,.formula-link,
  a.addEventListener('click',()=>{a.classList.add('tapped');setTimeout(()=>a.classList.remove('tapped'),450)});
 }
 
+// v1.0 working copy loader — keeps v0.8 frozen while the revised essay is assembled in modules.
+if(/ensaio-v10\.html$/.test(location.pathname)){
+  const parts=['v10-01-abertura.js'];
+  for(const src of parts){const s=document.createElement('script');s.src=src;s.defer=false;document.body.appendChild(s)}
+}
+
 // v0.6 — Caderno Vivo: persistência estratégica + fronteira normativa porosa
 (function(){
   if(document.getElementById('fronteira-normativa-porosa')) return;
