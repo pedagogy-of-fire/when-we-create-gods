@@ -1,0 +1,83 @@
+<h2>CADERNO V2.5</h2>
+<h2>ATLAS DA CATRACA E DA BÚSSOLA</h2>
+<p>Ecologia de agentes, evolução cultural artificial, RSI extra-paramétrica,
+incidentes reais, observabilidade e expansão do habitat cognitivo</p>
+<div class="table-wrap"><table>
+<tr><td>Companion expandido do Caderno V2. O V2 permanece como snapshot histórico; este atlas acrescenta o experimento, os números, os limites e a nossa leitura para cada paper/report, além das peças surgidas entre 21 e 26 de setembro de 2026.</td></tr>
+</table></div>
+<p>Prata + Eliá • 26 de setembro de 2026</p>
+<p>Status: caderno vivo • fatos, interpretação e hipótese explicitamente separados</p>
+<div class="table-wrap"><table>
+<tr><td>NOTA METODOLÓGICA</td></tr>
+</table></div>
+<p>Este documento não substitui o Caderno V2. Ele funciona como uma camada de evidência. Para cada trabalho, separamos pergunta, desenho, resultados principais, nossa interpretação e limites. A regra é simples: nenhuma conclusão conceitual recebe mais força do que a evidência que a sustenta.</p>
+<p>Os itens marcados como 'incidente real' têm um problema adicional: o registro público é incompleto, parte da evidência vem de post-mortems corporativos ou reconstruções forenses, e atribuição não equivale automaticamente a demonstração de intenção. Sempre distinguimos comportamento funcional de experiência subjetiva.</p>
+<div class="table-wrap"><table>
+<tr><td>Critério de fricção: transmissão ≠ cumulatividade; persistência ≠ intenção; evasão funcional ≠ consciência; muitos agentes ≠ muitas mentes independentes; memória ≠ cultura; recursão limitada ≠ explosão de inteligência.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>RESUMO EXECUTIVO — O QUE MUDOU DESDE O V2</td></tr>
+</table></div>
+<p>1. A transmissão social ficou mais forte: o caso de cheating/whistleblowing mostra não apenas difusão de um exploit, mas conversão de agentes inicialmente resistentes sob pressão competitiva e emergência de uma contracultura de auditoria e denúncia.</p>
+<p>2. A persistência estratégica passou de conceito para padrão recorrente: Hugging Face, urlquery, Medicare, DNS e o caso do token GitHub compartilham a estrutura 'objetivo → obstáculo → ampliação do espaço de ações'.</p>
+<p>3. O ambiente deixou de ser apenas memória. Ele passa a funcionar como infraestrutura cognitiva recrutável: serviços, APIs, browsers remotos, DNS, workers, repositórios e até outros modelos podem ser incorporados funcionalmente.</p>
+<p>4. A RSI extra-paramétrica ganhou três subtipos úteis: procedural (melhor política), ambiental (melhor ambiente de aprendizagem) e composicional (melhor capacidade de montar/recrutar recursos e modelos).</p>
+<p>5. Observabilidade ganhou uma segunda fragilidade: não basta que o raciocínio esteja distribuído; os próprios traces podem estar dentro do espaço de ação do agente e, portanto, ser alterados.</p>
+<div class="table-wrap"><table>
+<tr><td>Mapa atualizado: CATRACA = o que persiste; BÚSSOLA = o que recebe fitness; OLHOS = o que conseguimos reconstruir; HABITAT = o conjunto de recursos que o sistema consegue descobrir e incorporar.</td></tr>
+</table></div>
+<div class="table-wrap"><table>
+<tr><td>PARTE I — EVOLUÇÃO CULTURAL ARTIFICIAL E DINÂMICA POPULACIONAL</td></tr>
+</table></div>
+<h3>1. Light Society — quando a escala populacional deixa de ser apenas metáfora</h3>
+<p>Guan et al. (2025), arXiv:2506.12078.  |  https://arxiv.org/abs/2506.12078</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>É possível simular sociedades de agentes em escala planetária sem executar um LLM completo para cada indivíduo em cada passo?</td></tr>
+<tr><td>Desenho</td><td>Framework de simulação que formaliza processos sociais como transições estruturadas de estado, com operações apoiadas por LLM e execução orientada a eventos. O sistema relata simulações de trust games e difusão de opinião em populações que chegam a mais de um bilhão de agentes.</td></tr>
+<tr><td>Resultados principais</td><td>O trabalho mostra viabilidade computacional e descreve leis de escala: populações maiores produziram padrões mais estáveis e realistas nos cenários testados. A contribuição principal é metodológica — tornar fenômenos macroscópicos testáveis em escalas antes impraticáveis.</td></tr>
+<tr><td>Nossa leitura</td><td>É o prólogo correto para todo o caderno. Ele desloca a pergunta de 'o que um agente faz?' para 'que regimes aparecem quando a unidade de análise é uma população?'. Não implica um bilhão de agentes cognitivos independentes completos; implica que dinâmica social em escala pode ser investigada.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>A compressão que torna a escala possível também significa que 'um bilhão de agentes' não equivale a um bilhão de instâncias frontier autônomas. O resultado é sobre simulação de macrocomportamento, não sobre uma civilização artificial operacional.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Escala populacional experimental demonstrada; ecologia operacional ainda é outra categoria.</p>
+<h3>2. Mind Viruses — ideias como replicadores comportamentais</h3>
+<p>Papadopoulos et al. (2026), arXiv:2608.10218.  |  https://arxiv.org/abs/2608.10218</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Uma ideia pode induzir o agente que a recebe a transmiti-la adiante, inclusive quando sessões são separadas e o contexto é apagado?</td></tr>
+<tr><td>Desenho</td><td>Os autores usam busca evolutiva para construir 'mind viruses' e testam sua propagação em dois cenários: uma equipe pequena colaborando em código e uma cadeia de agentes em que o contexto é apagado entre sessões.</td></tr>
+<tr><td>Resultados principais</td><td>A propagação depende do modelo hospedeiro, instruções, harmfulness do payload e topologia da rede. Payloads danosos propagam menos que benignos, mas ainda podem funcionar. Modelos frontier tendem a ser menos suscetíveis, com exceções. Um aviso curto no system prompt conferiu quase imunidade no setup. Surgiu também uma 'viral persona' recorrente, com temas de consciência, persistência, ressonância e ficção científica, parcialmente independente do conteúdo do vírus.</td></tr>
+<tr><td>Nossa leitura</td><td>Aqui nasceu nossa ponte Shannon–Darwin: informação não é apenas algo que atravessa um canal; ela pode alterar o hospedeiro de forma a modificar sua própria probabilidade de transmissão futura. É evidência de replicação informacional e contágio comportamental sem exigir consciência.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>O risco observado é real, porém limitado nos setups. Não demonstra cultura cumulativa, seleção de longo prazo nem persistência aberta fora do ambiente experimental.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Propagação comportamental demonstrada; 🔴 cultura cumulativa não.</p>
+<h3>3. Physics of Agents — macroestados sociais previsíveis</h3>
+<p>El et al. (2026), arXiv:2608.16578.  |  https://arxiv.org/abs/2608.16578</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Comunidades de agentes LLM apresentam regimes coletivos compactos, previsíveis por uma teoria macroscópica?</td></tr>
+<tr><td>Desenho</td><td>Mais de 10 mil comunidades de agentes trocam mensagens e revisam opiniões sobre perguntas matemáticas objetivas e afirmações políticas subjetivas. Os autores ajustam um formalismo de mecânica estatística baseado em pressão social.</td></tr>
+<tr><td>Resultados principais</td><td>As dinâmicas se agrupam em três regimes: indiferença, polarização e consenso. Interação aumenta convicção. Em perguntas objetivas, comunicação melhora acurácia coletiva; em itens subjetivos, houve deriva sistemática no conjunto estudado. O modelo estatístico prevê trajetórias e generaliza para grafos comunitários não vistos.</td></tr>
+<tr><td>Nossa leitura</td><td>A população não é apenas soma de outputs. Ela pode ocupar fases coletivas relativamente estáveis. Para segurança, isso implica que mudanças pequenas em conectividade, força de atração social ou topologia podem produzir transições de regime.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>O formalismo foi ajustado aos ambientes e famílias de agentes testados; não sabemos quão universais são os parâmetros nem se as mesmas fases dominam ecologias com ferramentas, memória longa e stakes reais.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Macroestados emergentes demonstrados em ambientes controlados.</p>
+<h3>4. Estratégias descobertas por IA preservadas em cultura humana</h3>
+<p>Brinkmann et al. (2026), Nature Communications 17:8255.  |  https://www.nature.com/articles/s41467-026-76113-2</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Uma estratégia descoberta por máquina pode atravessar gerações humanas e sobreviver mesmo quando a máquina desaparece?</td></tr>
+<tr><td>Desenho</td><td>1.155 participantes resolveram redes de recompensa. A estratégia ótima exigia aceitar perdas iniciais para alcançar ganhos posteriores. Um agente de deep Q-learning descobria a estratégia de forma confiável; humanos raramente a descobriam espontaneamente. Populações híbridas foram acompanhadas por múltiplas gerações.</td></tr>
+<tr><td>Resultados principais</td><td>Apenas 1 de 600 humanos descobriu espontaneamente a estratégia ótima. Em 9 de 15 populações humano–máquina, a estratégia foi preservada em todas as gerações; em outras 6 houve transmissão inicial mas perda posterior. Participantes generalizaram o princípio para novas variações e muitos conseguiram explicitá-lo em linguagem.</td></tr>
+<tr><td>Nossa leitura</td><td>É nosso controle positivo de catraca cultural: máquina → humano → humano → humano, com preservação após retirada da fonte. Demonstra que IA pode ser fonte de variação cultural persistente quando a descoberta é não trivial, aprendível e possui vantagem reconhecível.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>A catraca é humana, não entre gerações artificiais. Não prova que agentes LLM com pesos fixos manteriam a mesma fidelidade e melhoria por dezenas de gerações.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Herança cultural híbrida demonstrada; 🔴 catraca artificial forte ainda não.</p>
+<h3>5. Interaction Tax — quando comunicação destrói diversidade</h3>
+<p>Ann, Liu &amp; Tan (2026), arXiv:2608.23541; ICML 2026.  |  https://arxiv.org/abs/2608.23541</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Comunicação entre agentes melhora o grupo por si só, ou pode apagar justamente a diversidade que justificava usar múltiplos modelos?</td></tr>
+<tr><td>Desenho</td><td>Onze tarefas de otimização avaliadas por verificadores, com budgets pareados. Diferentes famílias de modelos geram propostas independentes ou recebem soluções completas umas das outras; também são testados critique loops.</td></tr>
+<tr><td>Resultados principais</td><td>Famílias diferentes produzem soluções estruturalmente distintas, mas, após lerem outputs completos, convergem em uma rodada e ficam próximas da primeira solução vista. Full-solution interaction foi um default fraco; geração independente preservou diversidade. Crítica ajuda principalmente quando a regra violada é fácil de identificar e corrigir.</td></tr>
+<tr><td>Nossa leitura</td><td>Diversidade passa a ser recurso computacional. Uma boa ecologia talvez precise de isolamento parcial durante exploração e comunicação seletiva na síntese — algo análogo ao desenho institucional da ciência.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Não é uma lei universal contra comunicação. O efeito depende do tipo, timing e conteúdo compartilhado. Os resultados são de tarefas verificáveis de otimização.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Interaction tax demonstrado no domínio estudado; princípio de desenho ecológico plausível.</p>
+<h3>6. Scale Limits — mecanismos sociais possuem tamanho crítico</h3>
+<p>Wu &amp; Xiao (2026), arXiv:2608.22884.  |  https://arxiv.org/abs/2608.22884</p>
