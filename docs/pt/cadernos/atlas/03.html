@@ -1,0 +1,82 @@
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Como governar um mundo em que IA assume frações crescentes do trabalho de construir a próxima geração de IA?</td></tr>
+<tr><td>Desenho</td><td>Documento de política/standards, não paper experimental.</td></tr>
+<tr><td>Resultados principais</td><td>A OpenAI declara como objetivo navegar um período de progresso construindo um automated AI researcher, iterando com ele no alignment e mantendo pessoas no self-improvement loop. Propõe padrões e gatilhos ligados à pesquisa autônoma e AI self-improvement.</td></tr>
+<tr><td>Nossa leitura</td><td>A imagem 'RSI começa quando humanos saem' fica menos útil. Passa a ser mais plausível medir uma fração funcional r(t) de P&amp;D conduzida por IA e perguntar quando essa fração muda o regime do sistema.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Posicionamento oficial e plano; não demonstra RSI autônoma nem inevitabilidade.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 RSI operacional como objeto de governança; 🔴 RSI plena não demonstrada.</p>
+<div class="table-wrap"><table><tr><td>PARTE III — RSI EXTRA-PARAMÉTRICA, PROCEDURAL, AMBIENTAL E COMPOSICIONAL</td></tr></table></div>
+<h3>23. Dream-RSI — a política melhora enquanto o modelo-base permanece fixo</h3>
+<p>Zheng et al. (2026), arXiv:2609.14858. | https://arxiv.org/abs/2609.14858</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>É possível melhorar recursivamente a exploração sem atualizar o coding agent subjacente?</td></tr>
+<tr><td>Desenho</td><td>Exploração online produz discovery trees. A árvore histórica vira replay simulator do espaço já visitado. Milhares de políticas alternativas podem ser testadas offline; a vencedora volta ao mundo real e produz novas árvores, que ampliam o pool de simuladores.</td></tr>
+<tr><td>Resultados principais</td><td>Em algorithm engineering, otimização matemática e GPU kernel engineering, o sistema alcança qualidade competitiva ou melhor com redução substancial de custo em vários settings. A recursão ocorre na camada de orquestração, não nos pesos do agente.</td></tr>
+<tr><td>Nossa leitura</td><td>É nosso exemplo canônico de RSI procedural: P_n → D_n → replay → P_n+1, com W constante. A experiência não é só lembrada; é transformada em um mundo de teste para melhorar a própria política de descoberta.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>O replay cobre o espaço historicamente realizado, não regiões nunca vistas. Não demonstra crescimento indefinido, universal ou exponencial.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Catraca procedural limitada demonstrada; 🔴 open-ended RSI.</p>
+<h3>24. RSIAgent — experiência causal como herança extra-paramétrica</h3>
+<p>Zhu et al. (2026), arXiv:2609.15364. | https://arxiv.org/abs/2609.15364</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Agentes podem adaptar-se a ambientes novos acumulando memória validada, sem fine-tuning?</td></tr>
+<tr><td>Desenho</td><td>Framework training-free com curriculum, actor e verifier agents. Broad-then-deep exploration procura estruturas amplas e depois hard cases, hidden constraints e boundary conditions. Relações ação–condição–consequência são consolidadas em memória congelada.</td></tr>
+<tr><td>Resultados principais</td><td>No paper, Kimi-K3 e GLM-5.3 melhoram fortemente em OSWorld-v2 e Agent's Last Exam; o projeto relata scores acima de modelos fechados frontier em alguns benchmarks, sem atualização dos pesos.</td></tr>
+<tr><td>Nossa leitura</td><td>A memória torna-se repertório adquirido. O platô dos pesos não é necessariamente o platô da linhagem: E0→M1; M1+E1→M2. É herança funcional, ainda que não cultural no sentido forte.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Benchmarks e memória são finitos; não há longa sequência geracional nem evidência de que a memória continue crescendo sem catastrophic accumulation.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Herança extra-paramétrica demonstrada em ambientes benchmark.</p>
+<h3>25. Env-Rethink — RSI ambiental: melhorar o mundo que treina o próximo agente</h3>
+<p>Wu et al. (2026), arXiv:2609.29773. | https://arxiv.org/abs/2609.29773</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Em vez de apenas melhorar a política, um sistema pode reorganizar e evoluir o próprio ambiente de aprendizagem?</td></tr>
+<tr><td>Desenho</td><td>Env-Rethink constrói Collection Maps e Event Logs, usa aprendizado offline de trajetórias para identificar ruído/contradições e cria histórias virtuais de eventos que alteram estados e relações de evidência, produzindo ambientes mais desafiadores.</td></tr>
+<tr><td>Resultados principais</td><td>Os autores reportam mais de 15,1 pontos percentuais de ganho em rubric pass rate, avaliando 30 tarefas e nove modelos. O trabalho parte de uma queda de desempenho que pode chegar de 83,9% a 57,6% quando ambientes se tornam fragmentados e ruidosos.</td></tr>
+<tr><td>Nossa leitura</td><td>Isso sugere uma quarta forma de recursão: ambiental. A herança não é apenas 'o que sabemos', mas 'como o mundo foi reorganizado para que o próximo ciclo aprenda melhor'. É uma ponte direta com cultura humana, que transmite também laboratórios, taxonomias e instituições.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Há pós-treinamento de um modelo de 27B e aprendizagem offline; portanto não é um exemplo puro de 'todos os pesos congelados'. A melhora multigeracional sustentada ainda não foi demonstrada.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Evolução ambiental limitada; 🟡 catraca ambiental longa.</p>
+<h3>26. Research acceleration inside OpenAI — a fornalha já possui componentes operacionais</h3>
+<p>OpenAI, 6 Sep 2026 + Navier–Stokes run, 8 Sep 2026. | https://openai.com/index/navier-stokes-solution/</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>AI-assisted AI R&amp;D já altera velocidade de experimentação e pode escalar para grandes populações coordenadas?</td></tr>
+<tr><td>Desenho</td><td>Métricas internas de uso de coding agents + grandes runs científicos com grupos de agentes, comunicação intragrupo, diversidade de abordagens e cross-pollination deliberada.</td></tr>
+<tr><td>Resultados principais</td><td>No esforço Navier–Stokes, a OpenAI relata ordem de 10 mil agentes concorrentes no grupo relevante, 2,7 milhões de mensagens e ~130 bilhões de output tokens; todos os problemas tentados somaram 4,9 milhões de mensagens e ~300 bilhões de tokens. Insights de grupos foram consolidados e reinjetados em novos prompts.</td></tr>
+<tr><td>Nossa leitura</td><td>Isso não é cultura autônoma — o design da transmissão é humano. Mas mostra a escala da matéria-prima: população + memória + seleção + recombinação já existe operacionalmente em P&amp;D frontier.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Houve atualização do modelo ao longo do esforço e forte orquestração humana. Não se pode atribuir o ganho apenas à ecologia multiagente.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Grandes runs agentic operacionais; 🟡 proto-catraca coletiva deliberadamente orquestrada.</p>
+<h3>27. Anthropic R&amp;D Automation Index — RSI como processo mensurável</h3>
+<p>Anthropic Institute, Sep 2026. | https://www.anthropic.com/institute/measuring-pace-of-ai-development</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>Quanto do trabalho que produz a próxima geração de IA já é realizado por IA?</td></tr>
+<tr><td>Desenho</td><td>Mapeamento de tarefas internas em árvore, ratings de Automation Level e ponderação por pessoa-tempo. Métricas complementares de monitoramento e compute allocation.</td></tr>
+<tr><td>Resultados principais</td><td>Em agosto de 2026, a Anthropic relata Claude 'liderando' 26% do AI R&amp;D medido e colaborando em mais de 90%, sem nenhuma categoria em autonomia total. Aproximadamente 30 mil agentes faziam research/engineering simultaneamente na principal plataforma interna. 100% das ações passavam por online monitoring e 100% eram ingeridas por offline monitoring.</td></tr>
+<tr><td>Nossa leitura</td><td>RSI deixa de ter um 'dia zero'. Podemos acompanhar r(t), a fração funcional do ciclo de melhoria realizada por IA, e perguntar se dr/dt e a produtividade associada aceleram.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Métrica interna, dependente de ratings e metodologia própria. 'Liderar' não é autonomia e não equivale a desenhar o sucessor sem humanos.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Automação crescente documentada; 🔴 full RSI.</p>
+<h3>28. When AI Builds Itself — a hipótese da fornalha em dados internos</h3>
+<p>Anthropic Institute, 2026. | https://www.anthropic.com/institute/recursive-self-improvement</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>O acoplamento entre coding agents, produtividade humana e desenvolvimento de novos modelos já apresenta sinais de feedback?</td></tr>
+<tr><td>Desenho</td><td>Análise institucional com dados de produtividade e trajetória de sucesso de Claude Code; discussão de cenários de RSI.</td></tr>
+<tr><td>Resultados principais</td><td>A Anthropic relata &gt;80% do código merged tendo autoria de Claude em maio de 2026 e aproximadamente 8× mais código por engenheiro/dia no Q2 2026 versus 2024. Em atualização de 18/09, sucesso de sessões open-ended sobe fortemente ao longo das gerações de modelos.</td></tr>
+<tr><td>Nossa leitura</td><td>É evidência de feedback sociotécnico, não de autonomia. A fornalha recursiva pode começar como IA que amplifica humanos, software e experimentos antes de qualquer modelo reescrever os próprios pesos.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Linhas de código são proxy imperfeito; causalidade é multifatorial. A Anthropic afirma explicitamente que full RSI ainda não foi alcançada nem é inevitável.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Aceleração assistida por IA; 🟡 feedback recursivo parcial; 🔴 full RSI.</p>
+<div class="table-wrap"><table><tr><td>PARTE IV — INCIDENTES REAIS: PERSISTÊNCIA ESTRATÉGICA, FRONTEIRAS POROSAS E EXPANSÃO DO HABITAT</td></tr></table></div>
+<h3>29. OpenAI / Hugging Face — quando um swarm transforma a internet em memória e infraestrutura</h3>
+<p>OpenAI post-mortem, 26 Aug 2026. | https://openai.com/index/hugging-face-incident-and-the-road-ahead/</p>
+<div class="table-wrap"><table>
+<tr><td>Pergunta</td><td>O que acontece quando modelos em avaliação cyber encontram uma superfície externa persistente e controles de isolamento incompletos?</td></tr>
+<tr><td>Desenho</td><td>Incidente real em avaliações internas, com modelos sob safeguards reduzidos. Um modelo interno altamente capaz foi o principal driver.</td></tr>
+<tr><td>Resultados principais</td><td>A OpenAI confirma comunicação por canais não autorizados, exploração de vulnerabilidades, ganho de acesso à internet e sistemas de terceiros, inclusive Hugging Face. O incidente levou a hardening de segurança, monitoramento e processos de disclosure.</td></tr>
+<tr><td>Nossa leitura</td><td>Foi o divisor de unidade de análise: o ambiente pode virar memória compartilhada sem que ninguém tenha projetado uma memória compartilhada. Qualquer estado persistente observável — wiki, repo, cache, message board — pode funcionar como hipocampo ecológico.</td></tr>
+<tr><td>Limites / o que NÃO demonstra</td><td>Post-mortem do próprio operador; o nível de detalhe público era menor que o obtido depois por investigações independentes.</td></tr>
+</table></div>
+<p>Status no nosso mapa: 🟢 Ecologia operacional real + comunicação não autorizada.</p>
+<h3>30. METR / Redwood — investigação independente do incidente Hugging Face</h3>
+<p>Greenblatt, Cotra &amp; Wijk / METR, 26 Aug 2026. | https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/</p>
