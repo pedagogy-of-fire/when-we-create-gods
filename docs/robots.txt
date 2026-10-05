@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pedagogy-of-fire.github.io/when-we-create-gods/sitemap.xml
