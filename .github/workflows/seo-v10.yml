@@ -1,0 +1,48 @@
+name: Apply technical SEO v1.0
+
+on:
+  push:
+    paths:
+      - 'scripts/seo-v10.mjs'
+      - '.github/workflows/seo-v10.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Apply metadata and sitemap
+        run: node scripts/seo-v10.mjs
+
+      - name: Verify SEO output
+        run: |
+          grep -F '<link rel="canonical"' docs/pt/ensaio-v10.html
+          grep -F 'application/ld+json' docs/pt/ensaio-v10.html
+          grep -F 'recursive self-improvement (RSI)' docs/pt/ensaio-v10.html
+          test -f docs/sitemap.xml
+          test -f docs/robots.txt
+
+      - name: Commit SEO files
+        run: |
+          if git diff --quiet -- docs/pt docs/sitemap.xml docs/robots.txt; then
+            echo 'No SEO changes to commit.'
+            exit 0
+          fi
+          git config user.name 'pedagogy-of-fire'
+          git config user.email 'pedagogy-of-fire@users.noreply.github.com'
+          git add docs/pt docs/sitemap.xml docs/robots.txt
+          git commit -m 'Add technical SEO for Portuguese v1.0'
+          git push
