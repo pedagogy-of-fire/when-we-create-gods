@@ -28,7 +28,7 @@ await page.evaluate(()=>{
     }
     el.setAttribute('content',content);
   };
-  const ensureLink=(rel,href,attrs={})=>{
+  const ensureLink=(rel,href)=>{
     let el=head.querySelector(`link[rel="${rel}"][href="${href}"]`);
     if(!el){
       el=document.createElement('link');
@@ -36,7 +36,6 @@ await page.evaluate(()=>{
       el.href=href;
       head.appendChild(el);
     }
-    for(const [k,v] of Object.entries(attrs)) el.setAttribute(k,v);
   };
 
   const canonical='https://pedagogy-of-fire.github.io/when-we-create-gods/pt/ensaio-v10.html';
@@ -104,6 +103,7 @@ let html=await page.content();
 await browser.close();
 
 if(!/^<!DOCTYPE html>/i.test(html)) html='<!DOCTYPE html>\n'+html;
+html=html.replace(/\s*<!-- v1\.0 frozen static snapshot · 5 out 2026 -->\s*/g,'\n');
 html=html.replace('<head>','<head>\n<!-- v1.0 frozen static snapshot · 5 out 2026 -->');
 
 await writeFile(target,html,'utf8');
