@@ -69,7 +69,7 @@ await page.evaluate(()=>{
     mainEntityOfPage:canonical,
     inLanguage:'pt-BR',
     datePublished:'2026-10-05',
-    dateModified:'2026-10-05',
+    dateModified:'2026-10-06',
     author:{'@type':'Organization',name:'Quando criarmos deuses'},
     publisher:{'@type':'Organization',name:'Quando criarmos deuses'},
     about:[
@@ -85,7 +85,7 @@ await page.evaluate(()=>{
     '@type':'BreadcrumbList',
     itemListElement:[
       {'@type':'ListItem',position:1,name:'Quando criarmos deuses',item:'https://pedagogy-of-fire.github.io/when-we-create-gods/pt/'},
-      {'@type':'ListItem',position:2,name:'Ensaio v1.0',item:canonical}
+      {'@type':'ListItem',position:2,name:'Ensaio v1.1',item:canonical}
     ]
   });
   head.appendChild(breadcrumb);
@@ -103,19 +103,19 @@ let html=await page.content();
 await browser.close();
 
 if(!/^<!DOCTYPE html>/i.test(html)) html='<!DOCTYPE html>\n'+html;
-html=html.replace(/\s*<!-- v1\.0 frozen static snapshot · 5 out 2026 -->\s*/g,'\n');
-html=html.replace('<head>','<head>\n<!-- v1.0 frozen static snapshot · 5 out 2026 -->');
+html=html.replace(/\s*<!-- v1\.1 frozen static snapshot · 6 out 2026 -->\s*/g,'\n');
+html=html.replace('<head>','<head>\n<!-- v1.1 frozen static snapshot · 6 out 2026 -->');
 
 await writeFile(target,html,'utf8');
 
 const check=await readFile(target,'utf8');
 const required=[
-  'v1.0 · 5 out 2026',
+  'v1.1 · 6 out 2026',
   'A arquitetura do não saber',
   'A herança que atravessa substratos',
   'A mente que observa a própria mente',
   'Valores sob seleção',
-  'R ≈ C × A × H × X × O × (1 + αS) × (1 + βMₑff) × (1 + γL)',
+  'Rₜₒₜₐₗ ≈ Rₐₘₚ + Rₐg',
   'id="v10-site-nav"',
   'rel="canonical"',
   'application/ld+json',
