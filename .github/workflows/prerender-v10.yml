@@ -1,4 +1,4 @@
-name: Freeze v1.0 to static HTML
+name: Freeze v1.1 to static HTML
 
 on:
   push:
@@ -53,6 +53,6 @@ jobs:
           git config user.name 'pedagogy-of-fire'
           git config user.email 'pedagogy-of-fire@users.noreply.github.com'
           git add docs/pt/ensaio-v10.html
-          git commit -m 'Freeze v1.0 essay as static HTML'
+          git commit -m 'Freeze v1.1 essay as static HTML'
           git pull --rebase origin main
           git push origin main
